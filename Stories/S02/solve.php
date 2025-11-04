@@ -2,19 +2,19 @@
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-use Stories\S01\Quest01;
-use Stories\S01\Quest02;
-use Stories\S01\Quest03;
+use Stories\S02\Quest01;
+use Stories\S02\Quest02;
+use Stories\S02\Quest03;
 
 $questsToSolve = [
-    1 => [1, 2, 3],
-    2 => [1, 2, 3],
+    //1 => [1, 2, 3],
+    //2 => [1, 2, 3],
     3 => [1, 2, 3],
 ];
 
 foreach ($questsToSolve as $questNumber => $parts) {
 
-    $className = sprintf("Stories\\S01\\Quest%02d", $questNumber);
+    $className = sprintf("Stories\\S02\\Quest%02d", $questNumber);
 
     if (!class_exists($className)) {
         echo "Quest $questNumber não existe!\n";
