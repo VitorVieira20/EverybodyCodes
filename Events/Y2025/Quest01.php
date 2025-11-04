@@ -22,18 +22,6 @@ class Quest01
         $this->instructions = explode(',', $lines[2]);
     }
 
-    public function run(): void
-    {
-        $this->parse($this->input1);
-        $this->solvePart1();
-
-        $this->parse($this->input2);
-        $this->solvePart2();
-
-        $this->parse($this->input3);
-        $this->solvePart3();
-    }
-
     public function solvePart1(): string
     {
         $this->parse($this->input1);
