@@ -170,8 +170,4 @@ class Quest02
 
         return $totalEngraved;
     }
-
-
-
-
 }
