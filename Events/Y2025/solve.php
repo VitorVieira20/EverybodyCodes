@@ -9,6 +9,7 @@ $questsToSolve = [
     4 => [1, 2, 3],
     5 => [1, 2, 3],
     6 => [1, 2, 3],
+    7 => [1, 2, 3],
 ];
 
 foreach ($questsToSolve as $questNumber => $parts) {
