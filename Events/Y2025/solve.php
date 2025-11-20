@@ -16,6 +16,7 @@ $questsToSolve = [
     11 => [1, 2, 3],
     12 => [1, 2, 3],
     13 => [1, 2, 3],
+    14 => [1, 2, 3],
 ];
 
 foreach ($questsToSolve as $questNumber => $parts) {
