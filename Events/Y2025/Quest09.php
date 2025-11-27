@@ -21,9 +21,9 @@ class Quest09
     }
 
 
-    public function solvePart1(): string
+    public function solvePart1(?string $inputFile = null): string
     {
-        $this->parse($this->input1);
+        $this->parse($inputFile ?? $this->input1);
 
         $d1 = $this->dnas[0];
         $d2 = $this->dnas[1];
@@ -73,9 +73,9 @@ class Quest09
     }
 
 
-    public function solvePart2(): string
+    public function solvePart2(?string $inputFile = null): string
     {
-        $this->parse($this->input2);
+        $this->parse($inputFile ?? $this->input2);
 
         $dnas = $this->dnas;
         $count = count($dnas);
@@ -139,9 +139,9 @@ class Quest09
 
 
 
-    public function solvePart3(): string
+    public function solvePart3(?string $inputFile = null): string
     {
-        $this->parse($this->input3);
+        $this->parse($inputFile ?? $this->input3);
 
         $dnas = $this->dnas;
         $count = count($dnas);

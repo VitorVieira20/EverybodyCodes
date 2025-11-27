@@ -52,9 +52,9 @@ class Quest07
         return true;
     }
 
-    public function solvePart1(): string
+    public function solvePart1(?string $inputFile = null): string
     {
-        $this->parse($this->input1);
+        $this->parse($inputFile ?? $this->input1);
 
         foreach ($this->names as $name) {
             if ($this->verifyRule($name)) {
@@ -65,9 +65,9 @@ class Quest07
         return "Not found.\n";
     }
 
-    public function solvePart2(): string
+    public function solvePart2(?string $inputFile = null): string
     {
-        $this->parse($this->input2);
+        $this->parse($inputFile ?? $this->input2);
 
         $count = 0;
         foreach ($this->names as $key => $name) {
@@ -79,9 +79,9 @@ class Quest07
         return (string)$count;
     }
 
-    public function solvePart3(): string
+    public function solvePart3(?string $inputFile = null): string
     {
-        $this->parse($this->input3);
+        $this->parse($inputFile ?? $this->input3);
 
         $minLen = 7;
         $maxLen = 11;

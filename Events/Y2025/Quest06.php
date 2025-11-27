@@ -16,9 +16,9 @@ class Quest06
         $this->letters = trim($lines[0]);
     }
 
-    public function solvePart1(): string
+    public function solvePart1(?string $inputFile = null): string
     {
-        $this->parse($this->input1);
+        $this->parse($inputFile ?? $this->input1);
 
         $filtered = preg_replace('/[^Aa]/', '', $this->letters);
         $mentors = 0;
@@ -32,9 +32,9 @@ class Quest06
         return (string)$pairs;
     }
 
-    public function solvePart2(): string
+    public function solvePart2(?string $inputFile = null): string
     {
-        $this->parse($this->input2);
+        $this->parse($inputFile ?? $this->input2);
 
         $totalPairs = 0;
         $uniqueCategories = [];
@@ -63,14 +63,14 @@ class Quest06
         return (string)$totalPairs;
     }
 
-    public function solvePart3(): string
+    public function solvePart3(?string $inputFile = null, $REPEATS = 1000, $RANGE = 1000): string
     {
-        $this->parse($this->input3);
+        $this->parse($inputFile ?? $this->input3);
 
         $segment = $this->letters;
         $L = strlen($segment);
-        $REPEATS = 1000;
-        $RANGE = 1000;
+        /* $REPEATS = 1000;
+        $RANGE = 1000; */
 
         $uniqueCategories = [];
         foreach (str_split($segment) as $ch) {
