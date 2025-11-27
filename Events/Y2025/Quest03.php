@@ -32,9 +32,9 @@ class Quest03
     }
 
 
-    public function solvePart1(): string
+    public function solvePart1(?string $inputFile = null): string
     {
-        $this->parse($this->input1);
+        $this->parse($inputFile ?? $this->input1);
 
         $this->orderNumbers();
 
@@ -42,9 +42,9 @@ class Quest03
     }
 
 
-    public function solvePart2(): string
+    public function solvePart2(?string $inputFile = null): string
     {
-        $this->parse($this->input2);
+        $this->parse($inputFile ?? $this->input2);
 
         $this->orderNumbers();
 
@@ -52,9 +52,9 @@ class Quest03
     }
 
 
-    public function solvePart3(): string
+    public function solvePart3(?string $inputFile = null): string
     {
-        $this->parse($this->input3);
+        $this->parse($inputFile ?? $this->input3);
 
         rsort($this->numbers);
 

@@ -123,7 +123,6 @@ class Quest08
         $maxCuts = 0;
 
         for ($i = 1; $i <= $N; $i++) {
-            echo $i . PHP_EOL;
             for ($j = $i + 1; $j <= $N; $j++) {
                 $cuts = 0;
 

@@ -58,9 +58,9 @@ class Quest02
     }
 
 
-    public function solvePart1(): string
+    public function solvePart1(?string $inputFile = null): string
     {
-        $this->parse($this->input1);
+        $this->parse($inputFile ?? $this->input1);
 
         $this->R1 = 0;
         $this->R2 = 0;
@@ -73,9 +73,9 @@ class Quest02
     }
 
 
-    public function solvePart2(): string
+    public function solvePart2(?string $inputFile = null): string
     {
-        $this->parse($this->input2);
+        $this->parse($inputFile ?? $this->input2);
 
         $X0 = $this->A1;
         $Y0 = $this->A2;
@@ -116,9 +116,9 @@ class Quest02
     }
 
 
-    public function solvePart3(): int
+    public function solvePart3(?string $inputFile = null): int
     {
-        $this->parse($this->input3);
+        $this->parse($inputFile ?? $this->input3);
 
         $gridSize = 101;
         $startX = $this->A1;

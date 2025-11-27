@@ -1,3 +1,5 @@
 **/inputs/
+**/fixtures/
 /vendor
 composer.lock
+.phpunit.result.cache

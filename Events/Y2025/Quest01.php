@@ -22,9 +22,9 @@ class Quest01
         $this->instructions = explode(',', $lines[2]);
     }
 
-    public function solvePart1(): string
+    public function solvePart1(?string $inputFile = null): string
     {
-        $this->parse($this->input1);
+        $this->parse($inputFile ?? $this->input1);
         $maxIndex = count($this->names) - 1;
         $current = 0;
 
@@ -40,9 +40,9 @@ class Quest01
         return $this->names[$current];
     }
 
-    public function solvePart2(): string
+    public function solvePart2(?string $inputFile = null): string
     {
-        $this->parse($this->input2);
+        $this->parse($inputFile ?? $this->input2);
         $total = count($this->names);
         $current = 0;
 
@@ -58,9 +58,9 @@ class Quest01
         return $this->names[$current];
     }
 
-    public function solvePart3(): string
+    public function solvePart3(?string $inputFile = null): string
     {
-        $this->parse($this->input3);
+        $this->parse($inputFile ?? $this->input3);
         $total = count($this->names);
 
         foreach ($this->instructions as $instruction) {
