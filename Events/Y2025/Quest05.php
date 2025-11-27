@@ -191,9 +191,9 @@ class Quest05
     }
 
 
-    public function solvePart1(): string
+    public function solvePart1(?string $inputFile = null): string
     {
-        $this->parse($this->input1);
+        $this->parse($inputFile ?? $this->input1);
 
         $spine = $this->buildSpine();
 
@@ -206,9 +206,9 @@ class Quest05
     }
 
 
-    public function solvePart2(): int
+    public function solvePart2(?string $inputFile = null): int
     {
-        $this->parse($this->input2);
+        $this->parse($inputFile ?? $this->input2);
 
         $qualities = [];
 
@@ -221,9 +221,9 @@ class Quest05
     }
 
 
-    public function solvePart3(): string
+    public function solvePart3(?string $inputFile = null): string
     {
-        $lines = file($this->input3, FILE_IGNORE_NEW_LINES);
+        $lines = file($inputFile ?? $this->input3, FILE_IGNORE_NEW_LINES);
 
         foreach ($lines as $line) {
             $line = trim($line);
